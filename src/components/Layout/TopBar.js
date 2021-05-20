@@ -13,6 +13,7 @@ import VideoCall from'@material-ui/icons/VideoCall';
 import Apps from'@material-ui/icons/Apps';
 import MoreVert from'@material-ui/icons/MoreVert';
 import AccountCircle from'@material-ui/icons/AccountCircle';
+import {signIn} from 'next-auth/client';
 
 const useStyles = makeStyles((theme) => ({
       root:{
@@ -85,6 +86,7 @@ function TopBar(){
                     component="a"
                     variant="outlined"
                     startIcon={<AccountCircle />}
+                    onclick={() => signIn('google')}
                 >
                   Fazer Login
                 </Button>

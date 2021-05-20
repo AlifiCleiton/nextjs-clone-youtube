@@ -24,6 +24,8 @@ import VideoLibrary from '@material-ui/icons/VideoLibrary';
 import History from '@material-ui/icons/History';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 
+import {signIn} from 'next-auth/client';
+
 const useStyles = makeStyles((theme) => ({
   mobileDrawer: {
     width: 240,
@@ -133,6 +135,7 @@ function NavBar() {
                 variant="outlined"
                 color="secondary"
                 startIcon={<AccountCircle />}
+                onclick={() => signIn('google')}
               >
                 Fazer login
               </Button>
